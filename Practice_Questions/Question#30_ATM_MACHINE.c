@@ -1,9 +1,10 @@
 #include <stdio.h>
+#define PIN 1234
 int main()
 {
     // ATM machine
     printf("Welcome to ATM Machine\n");
-    int pin, amount, choice, current_amount = 1000, PIN = 1234;
+    int pin, amount, choice, current_amount = 1000;
     printf("Enter your 4 digit pin:");
     scanf("%d", &pin);
     if (pin != PIN)
@@ -19,6 +20,9 @@ int main()
             scanf("%d", &choice);
             switch (choice)
             {
+            default:
+                printf("Invalid choice");
+                return 0;
             case 1:
                 printf("Enter amount to withdraw:");
                 scanf("%d", &amount);
