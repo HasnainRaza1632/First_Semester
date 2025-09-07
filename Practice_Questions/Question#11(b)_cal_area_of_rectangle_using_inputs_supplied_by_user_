@@ -1,0 +1,19 @@
+// Problem B
+
+#include <stdio.h>
+
+int main()
+{
+
+    float width, height;
+
+    printf("Enter width of Rectangle:");
+    scanf("%f", &width);
+
+    printf("Enter Height of Rectangle:");
+    scanf("%f", &height);
+
+    printf("Area of Rectangle is:%.2f", width * height);
+
+    return 0;
+}
