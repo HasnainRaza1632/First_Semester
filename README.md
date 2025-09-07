@@ -50,7 +50,7 @@ gcc filename.c -o output
 ## 👨‍💻 About Me
 
 I’m **Hasnain Raza**, a Software Engineer in the making 🚀
-Future Dream → **Become a Fastian & Software Engineer** ❤️
+Future Dream → **Become a Certified Software Engineer** ❤️
 
 ---
 
