@@ -26,7 +26,7 @@ From `Hello World` ➝ to mini projects 🚀 … it’s all here!
 1. Clone my repo:
 
 ```bash
-git clone https://github.com/your-username/first-semester-journey.git
+https://github.com/HasnainRaza1632/First_Semester.git
 ```
 
 2. Pick any file you like 🤓
