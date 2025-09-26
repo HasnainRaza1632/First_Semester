@@ -1,25 +1,19 @@
 #include <stdio.h>
-int swap(int a, int b)
+int swap(int *a, int *b)
 {
-
-    b = b + a; // b = 1 + 2 = 3 ;
-    a = b - a; // a = 3 - 2  = 1 ;
-    b = b - a; // b = 3 - 1 = 2 ;
-    printf("Values of a and b after swaping is A = %d & B = %d", a, b);
-
+    *a = *a + *b; // *a = 1 , *b = 2 , *a = 1 + 2  , *a = 3
+    *b = *a - *b; // 3 - 2  = 1
+    *a = *a - *b; // 3 - 1 = 2
     return 0;
 }
 int main()
 {
-
-    int a, b, temp;
-    printf("Enter value of a :"); // a = 2
+    int a, b;
+    printf("Enter Value of a :");
     scanf("%d", &a);
-
-    printf("Enter value of b :"); // b = 1
+    printf("Enter value of b :");
     scanf("%d", &b);
-
-    swap(a, b);
-
+    swap(&a, &b);
+    printf("Value of a is %d and b is %d", a, b);
     return 0;
 }
