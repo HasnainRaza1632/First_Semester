@@ -1,5 +1,6 @@
 #include <stdio.h>
-#define PIN 1234
+#include <stdbool.h>
+#define PIN 1234 
 int main()
 {
     // ATM machine
@@ -40,20 +41,22 @@ int main()
                 printf("Your current balance is:%d\n", current_amount);
                 break;
             case 3:
-                int PIN;
+                int NewPin , UserEntered;
+                bool isCorrectPin = true ;  
                 printf("Enter Your new PIN:");
-                scanf("%d", &PIN);
-                printf("Your new Pin is:%d\n", PIN);
+                scanf("%d", &NewPin);
+                printf("Your new Pin is:%d\n", NewPin);
                 printf("Please Enter Your pin:");
-                scanf("%d", &pin);
-                if (pin != PIN)
+                scanf("%d" ,&UserEntered );
+                if (NewPin == UserEntered)
                 {
-                    printf("Invalid pin");
-                    return 0;
+                    isCorrectPin = true ; 
+                    break;
                 }
                 else
                 {
-                    break;
+                    printf("Invalid pin");
+                    return 0;
                 }
                 break;
             case 4:
