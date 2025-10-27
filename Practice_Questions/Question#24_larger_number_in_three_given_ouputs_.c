@@ -15,6 +15,7 @@ int main()
     scanf("%d", &c);
 
     // logic
+    
     if (a > b && a > c)
     {
         printf("%d is Greater than %d and %d", a, b, c);

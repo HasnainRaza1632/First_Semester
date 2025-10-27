@@ -5,7 +5,7 @@
 int main()
 {
 
-    float width, height;
+    float width , height;
 
     printf("Enter width of Rectangle:");
     scanf("%f", &width);
