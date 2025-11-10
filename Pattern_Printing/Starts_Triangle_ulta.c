@@ -6,6 +6,7 @@ int main()
     int rows, columns;
     printf("Enter Number of lines: ");
     scanf("%d", &rows);
+    
     // printf("Enter Number of start in line: ");
     // scanf("%d", &columns);
 

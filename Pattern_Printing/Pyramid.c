@@ -2,14 +2,13 @@
 #include <math.h>
 int main()
 {
-    int row, colunm;
+    int row;
     printf("Enter Number of lines:");
     scanf("%d", &row);
 
     for (int i = 1; i <= row; i++)
     {
-        int noSpaces = row - i;
-        for (int s = 1 ; s <= noSpaces; s++)
+        for (int s = 1 ; s <= row - i; s++)
         {
             printf(" ");
         }
