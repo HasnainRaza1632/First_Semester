@@ -1,22 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 #include <math.h>
 
-int main()
+int main(int argc , char const *argv[])
 {
-    char Bits[100];
-    printf("Binary: ");
-    scanf("%[^\n]" , &Bits);
-
-    int sum = 0;
-
-    int n = strlen(Bits);
-
-    for (int i = 0; i < n; i++)
+    int sum = 0 ; 
+    if(argc == 2)
     {
-        int d = Bits[n - i - 1] - '0'; // convert char to int, right-to-left
-        sum += d * pow(2, i);
+        for (int i = 0 , n = strlen(argv[1]) ; i < n; i++)
+        {
+           int result =  argv[1][n - 1 - i] - '0';
+            result = result * pow(2,i);
+            sum += result;
+        }
+        printf("Decimal :%d" , sum);
     }
-    printf("Decimal = %d\n", sum);
-    return 0;
+    else
+    {
+        printf("Usage ./BitConverter \"Bits\"");
+    }
 }

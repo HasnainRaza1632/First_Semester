@@ -3,11 +3,9 @@
 int main()
 {
 
-    int rows, columns;
+    int rows;
     printf("Enter Number of lines: ");
     scanf("%d", &rows);
-    // printf("Enter Number of start in line: ");
-    // scanf("%d", &columns);
 
     for (int i = 1; i <= rows; i++)
     {
