@@ -1,44 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-
-int main(int argc, char *argv[])
-{
-	int key ;
-	char plainText[100] ; 
-
 	
-	if(argc != 2)
-		{
-			printf("Usage : ./practice.exe key");
-			return 0; 
-		}
+int main()
+{
+ 
+   int rotation ;
+   int arr[5] = {1,2,3,4,5};
+   int j = sizeof(arr) / sizeof(arr[0]);
+	int i = 0 ;
 
-		key = atoi(argv[1]) ;
-		
-		printf("PlainText: ");
-		scanf("%[^\n]" , plainText);
-
-		printf("CipherText: ");
-
-	for(int i = 0 , n = strlen(plainText); i < n ; i++ )
+   while (i < j)
+        {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp ;
+            i++;
+            j--;
+        }
+	for(int i = 0 ; i < 5 ; i++ )
 	{
-		if(isdigit(argv[1][i]))
-		{
-			if(toupper(plainText[i]))
-			{
-				char c = ( (plainText[i] - 'A' + key )%26) + 'A';
-				printf("%c" , c) ; 
-			}
-			if (tolower(plainText[i]))
-			{
-				char c = ( (plainText[i] - 'a' + key )%26) + 'a';
-				printf("%c", c) ; 
-			}
-		}
+		printf("%d ", arr[i]);
 	}
-
-		printf("\n");
-	return 0;
 }
+
+
